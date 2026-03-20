@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ChurnWhisper Design System - Light & Dark */
+@layer base {
+  :root {
+    /* Light mode - Mission Control inspired but lighter */
+    --brand-primary: 160 84% 39%;
+    --brand-primary-light: 160 84% 45%;
+    --brand-primary-dark: 160 84% 32%;
+    --brand-danger: 0 84% 60%;
+    --brand-danger-light: 0 84% 70%;
+    --brand-warning: 38 92% 50%;
+    --brand-accent: 217 91% 60%;
+
+    --bg-page: 210 20% 98%;
+    --bg-card: 0 0% 100%;
+    --bg-card-elevated: 210 20% 96%;
+    --bg-surface: 210 20% 97%;
+    --bg-glow-green: 160 84% 39% / 0.1;
+    --bg-glow-red: 0 84% 60% / 0.1;
+
+    --text-primary: 222 47% 11%;
+    --text-secondary: 215 16% 47%;
+    --text-muted: 215 16% 57%;
+    --text-green: 160 84% 39%;
+    --text-red: 0 84% 60%;
+
+    --border-default: 214 32% 91%;
+    --border-glow-green: 160 84% 39% / 0.3;
+    --border-glow-red: 0 84% 60% / 0.3;
+
+    --glass-bg: 255 255 255 / 0.9;
+    --glass-border: 0 0 0 / 0.08;
+
+    --background: var(--bg-page);
+    --foreground: var(--text-primary);
+    --card: var(--bg-card);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-card);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--brand-primary);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--bg-card-elevated);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--bg-card-elevated);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--bg-card-elevated);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--brand-danger);
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--border-default);
+    --input: var(--border-default);
+    --ring: var(--brand-primary);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark mode - Command center */
+    --brand-primary: 160 84% 39%;
+    --brand-primary-light: 160 84% 45%;
+    --brand-primary-dark: 160 84% 32%;
+    --brand-danger: 0 84% 60%;
+    --brand-danger-light: 0 84% 70%;
+    --brand-warning: 38 92% 50%;
+    --brand-accent: 217 91% 60%;
+
+    --bg-page: 222 47% 7%;
+    --bg-card: 222 47% 9%;
+    --bg-card-elevated: 222 47% 12%;
+    --bg-surface: 222 47% 8%;
+    --bg-glow-green: 160 84% 39% / 0.1;
+    --bg-glow-red: 0 84% 60% / 0.1;
+
+    --text-primary: 210 40% 98%;
+    --text-secondary: 214 32% 82%;
+    --text-muted: 215 20% 55%;
+    --text-green: 160 84% 45%;
+    --text-red: 0 84% 65%;
+
+    --border-default: 217 33% 17%;
+    --border-glow-green: 160 84% 39% / 0.3;
+    --border-glow-red: 0 84% 60% / 0.3;
+
+    --glass-bg: 17 24% 9% / 0.8;
+    --glass-border: 255 255 255 / 0.1;
+
+    --background: var(--bg-page);
+    --foreground: var(--text-primary);
+    --card: var(--bg-card);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-card);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--brand-primary);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--bg-card-elevated);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--bg-card-elevated);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--bg-card-elevated);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--brand-danger);
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--border-default);
+    --input: var(--border-default);
+    --ring: var(--brand-primary);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+}
+
+/* Utility classes for ChurnWhisper */
+.bg-brand-primary { background-color: hsl(var(--brand-primary)); }
+.text-brand-primary { color: hsl(var(--brand-primary)); }
+.border-brand-primary { border-color: hsl(var(--brand-primary)); }
+.bg-brand-danger { background-color: hsl(var(--brand-danger)); }
+.text-brand-danger { color: hsl(var(--brand-danger)); }
+.bg-brand-warning { background-color: hsl(var(--brand-warning)); }
+.text-brand-warning { color: hsl(var(--brand-warning)); }
+
+.glow-green {
+  box-shadow: 0 0 20px hsl(var(--brand-primary) / 0.3);
+}
+.glow-red {
+  box-shadow: 0 0 20px hsl(var(--brand-danger) / 0.3);
+}

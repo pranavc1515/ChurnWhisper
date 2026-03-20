@@ -1,0 +1,7 @@
+ticket_id,account_name,created_date,subject,description,status,priority,satisfaction_score
+T001,Acme Corp,2024-03-01,Cannot export PDF,We need to export our data to PDF but the feature is broken.,Open,High,2
+T002,Acme Corp,2024-03-05,Considering alternatives,We are evaluating other tools. Need data export.,In Progress,Urgent,1
+T003,BrightTech,2024-03-10,Love the product,Everything works great. Keep it up!,Resolved,Low,5
+T004,MegaRetail,2024-03-08,Login issues,Users cannot log in. Affecting 50+ people.,Open,Urgent,1
+T005,StartupBox,2024-03-12,Feature request,Would love a dark mode option.,Resolved,Low,5
+T006,DataDrive,2024-03-15,Performance slow,Reports take 5 minutes to load.,In Progress,Medium,3
